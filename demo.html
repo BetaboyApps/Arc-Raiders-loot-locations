@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Raiders Loot Map - Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ff6b35;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .demo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .feature-card {
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #ff6b35;
+        }
+        .feature-card h3 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        .app-preview {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .launch-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s ease;
+            margin: 1rem;
+        }
+        .launch-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+        .tech-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .spec-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .spec-item strong {
+            color: #ff6b35;
+        }
+        .map-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .map-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .map-card h4 {
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+        .installation-steps {
+            counter-reset: step-counter;
+        }
+        .installation-step {
+            counter-increment: step-counter;
+            background: rgba(255, 255, 255, 0.05);
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b35;
+            position: relative;
+            padding-left: 3rem;
+        }
+        .installation-step::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            background: #ff6b35;
+            color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Arc Raiders Loot Map</h1>
+        
+        <div class="app-preview">
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                The ultimate mobile companion for Arc Raiders players. Find loot spots, plan extraction routes, and dominate every raid!
+            </p>
+            <a href="index.html" class="launch-button">🚀 Launch App</a>
+            <a href="README.md" class="launch-button" style="background: rgba(255, 255, 255, 0.1);">📖 Read Documentation</a>
+        </div>
+
+        <div class="demo-section">
+            <h2 style="color: #ff6b35; margin-bottom: 1.5rem;">🎯 Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🗺️ Interactive Maps</h3>
+                    <p>Complete coverage of all 5 Arc Raiders maps with real-time interactive markers for every loot location.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Mobile-First Design</h3>
+                    <p>Optimized for mobile gameplay with touch-friendly controls and responsive design.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 Smart Search</h3>
+                    <p>Find specific loot types, locations, or items instantly with intelligent search functionality.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Offline Support</h3>
+                    <p>Works without internet connection - perfect for use during raids when connectivity is limited.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 Risk Assessment</h3>
+                    <p>Every location includes risk levels and strategic tips to help you plan safer routes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔧 PWA Technology</h3>
+                    <p>Install to your home screen like a native app with fast loading and smooth performance.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 style="color: #ff6b35; margin-bottom: 1.5rem;">🗺️ Available Maps</h2>
+            <div class="map-showcase">
+                <div class="map-card">
+                    <h4>Dam Battlegrounds</h4>
+                    <p>Level 15-25<br>Industrial Facility</p>
+                    <small>5 Loot Locations</small>
+                </div>
+                <div class="map-card">
+                    <h4>Acceria Spaceport</h4>
+                    <p>Level 25-35<br>Orbital Facility</p>
+                    <small>5 Loot Locations</small>
+                </div>
+                <div class="map-card">
+                    <h4>Buried City</h4>
+                    <p>Level 10-20<br>Underground Ruins</p>
+                    <small>5 Loot Locations</small>
+                </div>
+                <div class="map-card">
+                    <h4>Blue Gate</h4>
+                    <p>Level 30+<br>Experimental Facility</p>
+                    <small>5 Loot Locations</small>
+                </div>
+                <div class="map-card">
+                    <h4>Stella Montis</h4>
+                    <p>Level 25-35<br>Research Complex</p>
+                    <small>5 Loot Locations</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 style="color: #ff6b35; margin-bottom: 1.5rem;">📱 Installation Guide</h2>
+            <div class="installation-steps">
+                <div class="installation-step">
+                    <strong>Open in Mobile Browser</strong><br>
+                    Visit the app URL in Chrome, Safari, or any modern mobile browser.
+                </div>
+                <div class="installation-step">
+                    <strong>Add to Home Screen</strong><br>
+                    Tap the browser menu and select "Add to Home Screen" or "Install App".
+                </div>
+                <div class="installation-step">
+                    <strong>Launch Like Native App</strong><br>
+                    The app will appear on your home screen and launch in fullscreen mode.
+                </div>
+                <div class="installation-step">
+                    <strong>Use Offline</strong><br>
+                    Once installed, the app works completely offline for uninterrupted gameplay.
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 style="color: #ff6b35; margin-bottom: 1.5rem;">⚙️ Technical Specifications</h2>
+            <div class="tech-specs">
+                <div class="spec-item">
+                    <strong>Technology:</strong><br>
+                    Progressive Web App (PWA)
+                </div>
+                <div class="spec-item">
+                    <strong>Compatibility:</strong><br>
+                    All modern mobile browsers
+                </div>
+                <div class="spec-item">
+                    <strong>Storage:</strong><br>
+                    ~2MB cached for offline use
+                </div>
+                <div class="spec-item">
+                    <strong>Performance:</strong><br>
+                    Optimized for 60fps smooth scrolling
+                </div>
+                <div class="spec-item">
+                    <strong>Data Usage:</strong><br>
+                    Minimal - works offline after first load
+                </div>
+                <div class="spec-item">
+                    <strong>Updates:</strong><br>
+                    Automatic background updates
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2 style="color: #ff6b35; margin-bottom: 1.5rem;">🎮 How to Use</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>1. Select Map</h3>
+                    <p>Choose from 5 available maps using the tabs at the top or the side menu.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>2. Filter Loot</h3>
+                    <p>Use the filter options to show only the loot types you're interested in.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>3. Tap Markers</h3>
+                    <p>Tap any loot marker to see detailed information, risk level, and strategic tips.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>4. Search Locations</h3>
+                    <p>Use the search bar to quickly find specific locations or loot types.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-preview">
+            <h2 style="color: #ff6b35; margin-bottom: 1rem;">Ready to Dominate Arc Raiders?</h2>
+            <p>Get the tactical advantage with comprehensive loot maps and strategic intelligence.</p>
+            <a href="index.html" class="launch-button">🎯 Start Raiding Now</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <p style="color: #888; font-size: 0.9rem;">
+                Unofficial fan-made tool for Arc Raiders by Embark Studios<br>
+                Built with ❤️ for the Arc Raiders community
+            </p>
+        </div>
+    </div>
+</body>
+</html>

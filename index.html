@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Raiders Loot Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a6ea72134059099.61ccc553ba6e2.jpg" alt="Arc Raiders" class="logo">
+                <h1>Loot Map</h1>
+                <button id="menu-toggle" class="menu-toggle">☰</button>
+            </div>
+        </header>
 
+        <!-- Navigation Menu -->
+        <nav id="nav-menu" class="nav-menu">
+            <div class="nav-content">
+                <button class="nav-close">×</button>
+                <div class="nav-section">
+                    <h3>Maps</h3>
+                    <button class="nav-item map-selector" data-map="dam">Dam Battlegrounds</button>
+                    <button class="nav-item map-selector" data-map="spaceport">Acceria Spaceport</button>
+                    <button class="nav-item map-selector" data-map="buried">Buried City</button>
+                    <button class="nav-item map-selector" data-map="bluegate">Blue Gate</button>
+                    <button class="nav-item map-selector" data-map="stella">Stella Montis</button>
+                </div>
+                <div class="nav-section">
+                    <h3>Filters</h3>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-high-tier" checked>
+                        <span>High-Tier Loot</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-weapons" checked>
+                        <span>Weapon Caches</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-blueprints" checked>
+                        <span>Blueprints</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-extracts" checked>
+                        <span>Extraction Points</span>
+                    </label>
+                    <label class="filter-item">
+                        <input type="checkbox" id="filter-secrets" checked>
+                        <span>Secret Caches</span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Map Selection Tabs -->
+            <div class="map-tabs">
+                <button class="tab-button active" data-map="dam">Dam</button>
+                <button class="tab-button" data-map="spaceport">Spaceport</button>
+                <button class="tab-button" data-map="buried">Buried</button>
+                <button class="tab-button" data-map="bluegate">Blue Gate</button>
+                <button class="tab-button" data-map="stella">Stella</button>
+            </div>
+
+            <!-- Map Container -->
+            <div class="map-container">
+                <div id="interactive-map" class="interactive-map">
+                    <!-- Map will be loaded here -->
+                    <div class="map-placeholder">
+                        <h2 id="current-map-title">Dam Battlegrounds</h2>
+                        <p id="current-map-description">Level 15-25 • Large Industrial Facility</p>
+                        <div class="map-image-container">
+                            <img id="map-image" src="https://cdn.metaforge.app/og/arc-raiders-map.png" alt="Arc Raiders Map" class="map-image">
+                            <div id="loot-markers" class="loot-markers">
+                                <!-- Loot markers will be dynamically added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="legend">
+                <h3>Legend</h3>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="marker high-tier"></span>
+                        <span>High-Tier Loot</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="marker weapons"></span>
+                        <span>Weapon Cache</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="marker blueprints"></span>
+                        <span>Blueprints</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="marker extracts"></span>
+                        <span>Extraction Point</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="marker secrets"></span>
+                        <span>Secret Cache</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Loot Detail Modal -->
+        <div id="loot-modal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close">×</button>
+                <div id="modal-body">
+                    <!-- Loot details will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search locations..." class="search-input">
+            <button id="search-button" class="search-button">🔍</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
